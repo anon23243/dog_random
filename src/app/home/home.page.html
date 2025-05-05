@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Dog random<ion-button routerLink="/sobre"style="--border-radius:20px; margin-left:20px; --background:rgb(95, 95, 95);">sobre</ion-button><ion-button style="--border-radius:20px; margin-left:20px; --background:rgb(112, 112, 112);">Cachorros Aleatórios</ion-button><ion-button style="--border-radius:20px; margin-left:20px; --background:rgb(158, 158, 158);" routerLink="/soueu">Quem sou eu</ion-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Dg</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <br>
+  <br>
+  <br>
+<p style="text-align:center; color:rgb(134, 134, 134); font-size:16px;">Clique no botão para visualizar imagens de cachorro aleatórias</p>
+  <div id="container">
+    
+
+    <img *ngIf="dogImageUrl" [src]="dogImageUrl" alt="Imagem aleatória de cachorro"  style="height:450px; border-radius:20px; box-shadow:rgb(194, 194, 197) 20px 12px 20px;"/>
+    <br>
+    <ion-button style="margin-top:15px;"(click)="dogimage()">Buscar cachorro</ion-button>
+  </div>
+</ion-content>
